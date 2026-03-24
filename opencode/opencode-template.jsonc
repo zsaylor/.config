@@ -1,0 +1,74 @@
+// Install as ~/.config/opencode/opencode.json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": true,
+  "enabled_providers": ["opencode"],
+  // main model
+  "model": "",
+  // model for lightweight tasks (e.g. session title generation)
+  "small_model": "",
+  "default_agent": "plan",
+  "permission": {
+    "doom_loop": "deny",
+    "edit": "allow",
+    "external_directory": "ask",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "patch": "allow",
+    "question": "allow",
+    "read": "allow",
+    "skill": "allow",
+    "todoread": "allow",
+    "todowrite": "allow",
+    "webfetch": "allow",
+    "bash": {
+      "*": "allow",
+      "terraform *": "deny",
+      "git push": "ask",
+      "rm *": "ask",
+      "rm -rf *": "ask",
+      "dd *": "deny",
+      "chmod 777 *": "deny",
+      "chown *": "deny",
+      "mkfs *": "deny",
+      "fdisk *": "deny",
+      "apt-get remove *": "deny",
+      "apt-get purge *": "deny",
+      "yum remove *": "deny",
+      "dnf remove *": "deny",
+      "killall *": "deny",
+      "pkill -9 *": "deny",
+    },
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+    },
+  },
+  // configure models per default agent
+  "agent": {
+    "plan": {
+      "model": "",
+    },
+    "build": {
+      "model": "",
+    },
+    "general": {
+      "model": "",
+    },
+    "explore": {
+      "model": "",
+    },
+    "summary": {
+      "model": "",
+    },
+    "compaction": {
+      "model": "",
+    },
+    "title": {
+      "model": "",
+    },
+  },
+}
