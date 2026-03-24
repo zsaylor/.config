@@ -39,7 +39,7 @@ font-synthetic-style = true
 font-size = 14.5
 
 # THEME
-theme = seoulbones dark
+# theme = seoulbones dark
 
 # CURSOR
 shell-integration-features = no-cursor

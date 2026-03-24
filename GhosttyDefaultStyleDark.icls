@@ -1,0 +1,36 @@
+<scheme name="Ghostty Default Style Dark" version="142" parent_scheme="Darcula">
+  <option name="CONSOLE_DEFAULT_BACKGROUND" value="303446"/>
+  <option name="CONSOLE_DEFAULT_FOREGROUND" value="c6d0f5"/>
+  <option name="BACKGROUND" value="303446"/>
+  <option name="FOREGROUND" value="c6d0f5"/>
+  <option name="SELECTION_BACKGROUND" value="626880"/>
+  <option name="SELECTION_FOREGROUND" value="c6d0f5"/>
+  <option name="CARET_COLOR" value="c6d0f5"/>
+  <option name="SELECTION_BACKGROUND" value="626880"/>
+  <option name="GUTTER_BACKGROUND" value="303446"/>
+  <option name="LINE_NUMBERS_COLOR" value="626880"/>
+  <option name="CARET_ROW_COLOR" value="626880"/>
+
+  <!-- 16‑color palette -->
+  <option name="COLOR_0" value="51576d"/>
+  <option name="COLOR_1" value="e78284"/>
+  <option name="COLOR_2" value="a6d189"/>
+  <option name="COLOR_3" value="e5c890"/>
+  <option name="COLOR_4" value="8caaee"/>
+  <option name="COLOR_5" value="f4b8e4"/>
+  <option name="COLOR_6" value="81c8be"/>
+  <option name="COLOR_7" value="a5adce"/>
+  <option name="COLOR_8" value="626880"/>
+  <option name="COLOR_9" value="e67172"/>
+  <option name="COLOR_10" value="8ec772"/>
+  <option name="COLOR_11" value="d9ba73"/>
+  <option name="COLOR_12" value="7b9ef0"/>
+  <option name="COLOR_13" value="f2a4db"/>
+  <option name="COLOR_14" value="5abfb5"/>
+  <option name="COLOR_15" value="b5bfe2"/>
+
+  <!-- Cursor & selection (roughly) -->
+  <option name="CARET_COLOR" value="f2d5cf"/>
+  <option name="SELECTION_BACKGROUND" value="626880"/>
+  <option name="SELECTION_FOREGROUND" value="c6d0f5"/>
+</scheme>
