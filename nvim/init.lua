@@ -928,9 +928,10 @@ require('lazy').setup({
   -- },
   {
     'nkxxll/ghostty-default-style-dark.nvim',
-    name = 'ghostty-default-style-dark',
+    lazy = false,
     priority = 1000,
     config = function()
+      require('ghostty-default-style-dark').setup {}
       vim.cmd.colorscheme 'ghostty-default-style-dark'
     end,
   },
