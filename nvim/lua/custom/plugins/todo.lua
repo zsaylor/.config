@@ -95,7 +95,7 @@ return {
   name = 'todo_done',
   dir = vim.fn.stdpath 'config', -- points to ~/.config/nvim
   config = function()
-    vim.keymap.set('n', '<leader>td', M.mark_done, {
+    vim.keymap.set('n', '<leader>todo', M.mark_done, {
       desc = 'Mark todo item as done and move to Done section',
       silent = true,
     })

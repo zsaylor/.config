@@ -183,7 +183,7 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-vim.keymap.set('n', '<leader>dt', function()
+vim.keymap.set('n', '<leader>td', function()
   vim.diagnostic.enable(not vim.diagnostic.is_enabled())
 end)
 
@@ -283,6 +283,24 @@ require('lazy').setup({
   -- options to `gitsigns.nvim`.
   --
   -- See `:help gitsigns` to understand what the configuration keys do
+  {
+    'shortcuts/no-neck-pain.nvim',
+    version = '*',
+    opts = {
+      width = 128,
+      mappings = { enabled = true },
+      buffers = {
+        scratchPad = { false },
+        wo = {
+          fillchars = 'eob: ',
+          statusline = ' ',
+        },
+      },
+      autocmds = {
+        enableOnVimEnter = true, -- Auto-enable on startup
+      },
+    },
+  },
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
@@ -485,6 +503,17 @@ require('lazy').setup({
         -- Load luvit types when the `vim.uv` word is found
         { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
       },
+    },
+  },
+  {
+    'S1M0N38/love2d.nvim',
+    event = 'VeryLazy',
+    version = '2.*',
+    opts = {},
+    keys = {
+      { '<leader>v', ft = 'lua', desc = 'LÖVE' },
+      { '<leader>vv', '<cmd>LoveRun<cr>', ft = 'lua', desc = 'Run LÖVE' },
+      { '<leader>vs', '<cmd>LoveStop<cr>', ft = 'lua', desc = 'Stop LÖVE' },
     },
   },
   {
@@ -913,25 +942,31 @@ require('lazy').setup({
   },
 
   -- Colorscheme
-  -- {
-  --   'zenbones-theme/zenbones.nvim',
-  --   -- Optionally install Lush. Allows for more configuration or extending the colorscheme
-  --   -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
-  --   -- In Vim, compat mode is turned on as Lush only works in Neovim.
-  --   dependencies = 'rktjmp/lush.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     vim.o.background = 'dark'
-  --     vim.cmd.colorscheme 'seoulbones'
-  --   end,
-  -- },
   {
     'nkxxll/ghostty-default-style-dark.nvim',
     lazy = false,
     priority = 1000,
     config = function()
-      require('ghostty-default-style-dark').setup {}
+      require('ghostty-default-style-dark').setup {
+        transparent = false,
+        terminal_colors = true,
+        styles = {
+          comments = { italic = true },
+          keywords = { italic = true },
+          functions = {},
+          variables = {},
+          sidebars = 'dark',
+          floats = 'dark',
+        },
+        dim_inactive = false,
+        lualine_bold = true,
+        on_colors = function(colors)
+          -- Increase highlight blend to make visual selection more obvious
+          local Util = require 'ghostty-default-style-dark.util'
+          colors.bg_visual = Util.blend_bg(colors.blue, 0.35) -- up from 0.15
+        end,
+        on_highlights = function(highlights, colors) end,
+      }
       vim.cmd.colorscheme 'ghostty-default-style-dark'
     end,
   },
