@@ -2,6 +2,7 @@
 
 DIRS=(
     "$HOME"
+    "$HOME/Code"
     "$HOME/forge"
     "$HOME/Documents/geumgo"
 )
