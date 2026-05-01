@@ -4,7 +4,7 @@ DIRS=(
     "$HOME"
     "$HOME/Code"
     "$HOME/forge"
-    "$HOME/Documents/Revelations"
+    "$HOME/Documents/geumgo"
 )
 
 if [[ $# -ge 1 ]]; then
