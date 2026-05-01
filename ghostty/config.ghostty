@@ -34,7 +34,7 @@
 # resize-overlay-duration = 4s 200ms
 
 # FONT
-font-family = Zenbones Brainy Semibold
+font-family = Iosevka NFM SemiBold
 font-synthetic-style = true
 font-size = 14.5
 

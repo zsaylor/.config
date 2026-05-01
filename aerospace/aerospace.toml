@@ -63,7 +63,7 @@ key-mapping.preset = 'qwerty'
 
 [[on-window-detected]]
     if.app-name-regex-substring = 'love'
-	run = 'layout floating'
+    run = 'layout floating'
 
 [mode.main.binding]
     alt-slash = 'layout tiles horizontal vertical'
